@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+  <style>
+
+.centered {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+body{background-color: #018ccd;
+   /* background-image:url(img/bg2.PNG);
+   background-attachment: fixed;
+   background-size:cover;
+   background-repeat:no-repeat; */
+}
+.front{
+    background-image:url(img/fx.jpg);
+   background-size:cover;
+}
+.back{
+   background-image:url(img/fx_2.jpg);
+   background-size:cover;
+   
+   .font-a-icons {
+      color: #05387b;
+      font-family: lato;
+      margin-left: 30%;
+      line-height: 90%;
+   }   
+   
+  
+   .bold{
+      font-weight: bold;
+   }
+   
+   .font-a-icons{    
+      margin-top: 25px;
+      
+      .icon-group{
+         margin-top: 8px;
+      }
+      
+      span, .link, .fab, a{
+         color: #05387b;
+      }  
+      
+      .fa{
+         font-size: 18px;
+      }
+      
+      span, a{
+         font-size: 16px;
+      }
+      
+      a, .website{
+         text-decoration: none;
+      }
+      
+      a:hover, .website:hover{
+         color: #3f3f3f;
+      }     
+   }
+   .icon-box{
+  position: relative;
+    color: white;
+    font-size: 18px;
+    height: 20px;
+    width: 20px;
+    padding: 5px;
+   top: -5px;
+    left: 10%;
+    display: inline-block;
+    border: 2px solid #018ccd;
+    border-radius: 25px;
+    margin: 5px;
+    text-align: center;
+    cursor: pointer;
+    background: #018ccd;
+    /* -webkit-transition: all ease 0.5s;
+    -moz-transition: all ease 0.5s;
+    transition: all ease 0.5s; */
+   }
+   .icon-box:hover {
+    box-shadow: inset 0 50px 0 0 #ffcc01;
+    color: white;
+   }
+}
+.flip-container {
+	perspective: 1000px;
+}
+	.flip-container:hover .flipper, .flip-container.hover .flipper {
+		transform: rotateY(180deg);
+      cursor: pointer;
+	}
+
+.flip-container, .front, .back {
+   height: 350px;
+   width: 600px;
+}
+
+.flipper {
+	transition: 0.5s;
+	transform-style: preserve-3d;
+	position: relative;
+}
+
+.front, .back {
+	backface-visibility: hidden;
+	position: absolute;
+}
+
+.front {
+	z-index: 2;
+	/* firefox 31 */
+	transform: rotateY(0deg);
+}
+
+.back{
+   background-color: #ffcc01;
+}
+
+.back {
+	transform: rotateY(180deg);
+}
+
+.vertical.flip-container {
+	position: relative;
+}
+
+	.vertical .back {
+		transform: rotateX(180deg);
+	}
+
+	.vertical.flip-container .flipper {
+		transform-origin: 100% 400x; 
+	}
+
+	.vertical.flip-container:hover .flipper {
+		transform: rotateX(-180deg);
+	}
+.fa, .fab, .fad, .fal, .far, .fas {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1.25;
+}
+
+.icon-box.active {
+            box-shadow: inset 0 50px 0 0 #ffcc01;
+            color: white;
+        }
+  </style> 
+ </head> 
+<div class="flip-container centered">
+    <div class="flipper"  onclick="toggleFlip()">
+         <div class="front"></div>
+     <div class="back">
+         <div style="background-color: #ffcc01;position: relative;bottom: 20px; width: 100%;  height:34px;top: 297px;">
+                <a class="icon-box" href="https://maps.app.goo.gl/De8c914WkCP8s7n98" target="_blank"><i class="fas fa-map-marked-alt"></i></a>
+                <a class="icon-box" href="https://friendscopiers.com/" target="_blank"><i class="fas fa-globe"></i></a>
+                <a class="icon-box" href="https://mail.google.com/mail/u/0/#inbox" target="_blank"><i class="fab fa-google-plus"></i></a>
+                <a class="icon-box" href="https://api.whatsapp.com/send?phone=7083453053" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                <!-- <a class="icon-box" href="https://pay.google.com/" target="_blank"><img src="img/qr.webp" alt="" style="width:18px;"></a> -->
+                <!-- <a class="icon-box" href="" target="_blank"><i class="fab fa-youtube"></i></a> -->
+        </div>
+     </div>
+    </div>
+   </div>
+   <script>
+      function toggleFlip() {
+          document.querySelector('.flipper').classList.toggle('hover');
+      }
+  </script>
